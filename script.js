@@ -1,3 +1,4 @@
+const COLOR_POWER_RANGER = '\x1b[31m%s\x1b[0m';
 class PowerRanger {
     #nombre = "def nombre";
     getNombre() {
@@ -9,9 +10,9 @@ class PowerRanger {
     }
 
     atacaA(unEnemigo) {
-        console.log("Soy el Power Ranger " + this.getNombre());
-        console.log("Atacando a " + unEnemigo.getNombre());
-    }
+        console.log(COLOR_POWER_RANGER, "Soy el Power Ranger " + this.getNombre());
+        console.log(COLOR_POWER_RANGER, "Atacando a " + unEnemigo.getNombre());
+    }    
 }
 
 class Enemigo {
