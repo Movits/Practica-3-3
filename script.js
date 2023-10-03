@@ -1,35 +1,34 @@
-const COLOR_POWER_RANGER = '\x1b[31m%s\x1b[0m';
-class PowerRanger {
-    #nombre = "def nombre";
-    getNombre() {
-        return this.#nombre;
-    }
+import { Perro } from "./perro.js";
+import { Persona } from "./persona.js";
 
-    setNombre(nombre) {
-        this.#nombre = nombre;
-    }
+const a = new Persona();
+const b = new Persona();
+const c = new Perro();
+const d = new Perro();
 
-    atacaA(unEnemigo) {
-        console.log(COLOR_POWER_RANGER, "Soy el Power Ranger " + this.getNombre());
-        console.log(COLOR_POWER_RANGER, "Atacando a " + unEnemigo.getNombre());
-    }    
-}
+a.setNombre("a");
+a.setEdad("1");
+b.setNombre("b");
+b.setEdad("2");
+c.setNombre("c");
+c.setColor("negro");
+d.setNombre("d");
+d.setColor("blanco");
 
-class Enemigo {
-    #nombre = "def nombre";
-    getNombre() {
-        return this.#nombre;
-    }
+const PersonaArray = [
+    a,b
+];
 
-    setNombre(nombre) {
-        this.#nombre = nombre;
-    }
-}
+const PerroArray = [
+    c,d
+];
 
-const unPowerRanger =  new PowerRanger();
-const enemigo1 = new Enemigo();
+console.log();
 
-enemigo1.setNombre("Zoor");
-unPowerRanger.setNombre("Rojo");
+console.log("Persona");
+console.table(PersonaArray);
 
-unPowerRanger.atacaA(enemigo1);
+console.log();
+
+console.log("Perro")
+console.table(PerroArray);
