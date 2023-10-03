@@ -18,7 +18,7 @@ export class Persona {
     darComida(perro) {
         if (perro.tieneHambre()) {
             console.log("Aca esta la comida")
-            hambrePerro = hambrePerro + 50;
+            perro.getHambre();
         } else {
             console.log("Ya voy")
         }
