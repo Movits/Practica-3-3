@@ -14,4 +14,13 @@ export class Persona {
     getEdad() {
         return this.#edad;
     }
+
+    darComida(perro) {
+        if (perro.tieneHambre()) {
+            console.log("Aca esta la comida")
+            hambrePerro = hambrePerro + 50;
+        } else {
+            console.log("Ya voy")
+        }
+    }
 }

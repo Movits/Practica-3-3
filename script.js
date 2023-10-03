@@ -32,3 +32,5 @@ console.log();
 
 console.log("Perro")
 console.table(PerroArray);
+
+a.darComida(c);
