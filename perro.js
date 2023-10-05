@@ -1,21 +1,13 @@
 export class Perro {
     #nombre = "def nombre";
-    #color = "def color";
-    #hambre = "def hambre";
+    #hambre = false;
 
     setNombre(nombre) {
         this.#nombre = nombre;
     }
-    setColor(color) {
-        this.#color = color;
-    }
     getNombre() {
         return this.#nombre;
     }
-    getColor() {
-        return this.#color;
-    }
-
     setHambre(hambre) {
         this.#hambre = hambre;
     }
@@ -49,7 +41,8 @@ export class Perro {
         }, 1000);
     }
 
-    alimentarseCon(comida) {
-        
-    }
+    /* alimentarseCon(comida) {
+        hambrePerro += 50
+    } */
+    
 }
