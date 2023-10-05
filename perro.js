@@ -1,6 +1,18 @@
 export class Perro {
     #nombre = "def nombre";
     #hambre = false;
+    #hambrePerro = 0;
+
+    constructor(){
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+        
+        this.#hambrePerro = getRandomInt(100)
+
+        console.log(this.#hambrePerro);
+        this.tieneHambre(this);
+    };
 
     setNombre(nombre) {
         this.#nombre = nombre;
@@ -14,19 +26,14 @@ export class Perro {
     getHambre() {
         return this.#hambre;
     }
-
-    tieneHambre(perro) {
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * max);
-        }
     
-        let hambrePerro = getRandomInt(100)
+    tieneHambre(perro) {
 
-        if (hambrePerro <= 30) {
+        if (this.#hambrePerro <= 30) {
             console.log("au au, humano quiero comida");
             perro.setHambre(true);
 
-        } else if (hambrePerro > 30 && hambrePerro < 60) {
+        } else if (this.#hambrePerro > 30 && this.#hambrePerro < 60) {
             console.log("au au, en un rato tengo hambre");
             perro.setHambre(false);
 
@@ -36,13 +43,14 @@ export class Perro {
         }
 
         setInterval(() => {
-            hambrePerro--
-            console.log(hambrePerro);
+            /* this.tieneHambre(this); */
+            this.#hambrePerro--
+            console.log(this.#hambrePerro);
         }, 1000);
     }
 
-    /* alimentarseCon(comida) {
+    alimentarseCon() {
         hambrePerro += 50
-    } */
-    
+    }
+
 }

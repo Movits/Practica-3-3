@@ -9,11 +9,11 @@ export class Persona {
     }
 
     darComida(perro) {
-        if (perro.setHambre(true)) {
+        if (perro.getHambre()) {
             console.log("Aca esta la comida")
-            perro.getHambre();
+            perro.alimentarseCon();
         } else {
-            console.log("Ya voy")
+            console.log("Guardo la comida")
         }
     }
 }
