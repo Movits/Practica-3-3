@@ -1,35 +1,10 @@
-const COLOR_POWER_RANGER = '\x1b[31m%s\x1b[0m';
-class PowerRanger {
-    #nombre = "def nombre";
-    getNombre() {
-        return this.#nombre;
-    }
+import { Perro } from "./perro.js";
+import { Persona } from "./persona.js";
 
-    setNombre(nombre) {
-        this.#nombre = nombre;
-    }
+const Roberto = new Persona();
+const Boris = new Perro();
 
-    atacaA(unEnemigo) {
-        console.log(COLOR_POWER_RANGER, "Soy el Power Ranger " + this.getNombre());
-        console.log(COLOR_POWER_RANGER, "Atacando a " + unEnemigo.getNombre());
-    }    
-}
+Roberto.setNombre("Roberto");
+Boris.setNombre("Boris");
 
-class Enemigo {
-    #nombre = "def nombre";
-    getNombre() {
-        return this.#nombre;
-    }
-
-    setNombre(nombre) {
-        this.#nombre = nombre;
-    }
-}
-
-const unPowerRanger =  new PowerRanger();
-const enemigo1 = new Enemigo();
-
-enemigo1.setNombre("Zoor");
-unPowerRanger.setNombre("Rojo");
-
-unPowerRanger.atacaA(enemigo1);
+Roberto.darComida(Boris);
